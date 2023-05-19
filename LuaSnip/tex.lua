@@ -394,10 +394,52 @@ s({trig = "sum"},
   {condition = in_mathzone}  -- `condition` option passed in the snippet `opts` table 
 ),
 
+--exp
+s({trig = "exp"},
+  fmta(
+    "\\exp{\\left( <> \\right)}",
+    {
+      i(1),
+    }
+  ),
+  {condition = in_mathzone}  -- `condition` option passed in the snippet `opts` table 
+),
+
+--sqrt
+s({trig = "sqrt"},
+  fmta(
+    "\\sqrt{<>}",
+    {
+      i(1),
+    }
+  ),
+  {condition = in_mathzone}  -- `condition` option passed in the snippet `opts` table 
+),
+
 --indize
 s({trig = "s", wordTrig=false},
   fmta(
     "_{<>}",
+    {
+      i(1),
+    }
+  ),
+  {condition = in_mathzone}  -- `condition` option passed in the snippet `opts` table 
+),
+
+s({trig = "txt", wordTrig=false},
+  fmta(
+    "\\text{<>}",
+    {
+      i(1),
+    }
+  ),
+  {condition = in_mathzone}  -- `condition` option passed in the snippet `opts` table 
+),
+
+s({trig = "^", wordTrig=false},
+  fmta(
+    "^{<>}",
     {
       i(1),
     }
