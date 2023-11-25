@@ -32,3 +32,5 @@ require("lazy").setup({{import = "plugins"}, {import = "plugins.lsp"}}, {root = 
     },
   },
 }})
+
+require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/lua/snippets/"})

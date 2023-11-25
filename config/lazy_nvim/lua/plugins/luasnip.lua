@@ -5,3 +5,4 @@ return {
 	-- install jsregexp (optional!).
 	build = "make install_jsregexp"
 }
+
