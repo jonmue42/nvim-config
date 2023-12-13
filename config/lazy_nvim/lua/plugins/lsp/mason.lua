@@ -16,7 +16,8 @@ return {
 	 	     ensure_installed = {
 	 	       "lua_ls", 	--lua
 		       "rust_analyzer", --rust
-		       "pyright", 	--python
+		       "pyright",	--python
+		       "jedi_language_server", --python (better for gd)
 		       "ltex", 		--latex
 		       "fortls", 	--fortran
 	 	     },
