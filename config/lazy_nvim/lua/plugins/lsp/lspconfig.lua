@@ -43,6 +43,12 @@ return {
 		lspconfig["fortls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			    cmd = {
+			        'fortls',
+			        '--lowercase_intrinsics',
+			        '--hover_signature',
+			        '--hover_language=fortran',
+				    },
 		})
 
 		--latex
