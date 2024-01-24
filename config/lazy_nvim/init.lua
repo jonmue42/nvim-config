@@ -33,4 +33,5 @@ require("lazy").setup({{import = "plugins"}, {import = "plugins.lsp"}}, {root = 
   },
 }})
 
-require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/lua/snippets/"})
+require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/lua/snippets/"}) -- This loads custom snippets written in lua
+require("luasnip.loaders.from_vscode").lazy_load({paths = "~/.config/nvim/lua/vscode-snippets/"}) -- This loads snippets from vscode plugins (right now only fortran for vs snippets)

@@ -8,6 +8,7 @@ return {
     		"saadparwaiz1/cmp_luasnip", -- for autocompletion
 	},
 	config = function()
+
 		local cmp = require("cmp")
 
     		local luasnip = require("luasnip")
@@ -20,13 +21,17 @@ return {
       				end
     			},
 		-- new keymaps	
-			mapping = cmp.mapping.preset.insert({
+			mapping = cmp.mapping.preset.insert({ -- mappings for insert mode
 				["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
 				["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
 				['<CR>'] = cmp.mapping.confirm({select = false}),
 				["<C-e>"] = cmp.mapping.abort(), -- close completion window
 				["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
+				["<C-n>"] = cmp.mapping(function()  -- func to jump to next luasnip insertnode
+					luasnip.jump(1)
+				end)
 			  }),
+			  
 		-- sources for autocompletion
 			sources = cmp.config.sources({
         			{ name = "nvim_lsp" },
