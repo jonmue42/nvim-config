@@ -33,6 +33,13 @@ return {
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 
 		--configure servers:
+		--zig
+		lspconfig["zls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+
 		--rust
 		lspconfig["rust_analyzer"].setup({
 			capabilities = capabilities,
